@@ -49,7 +49,11 @@ class LeftDrawer extends StatelessWidget {
             leading: CircleAvatar(
               child: Icon(Icons.movie,color: Colors.cyan,),
             ),
-            title: Text('热播电影')
+            title: Text('热播电影'),
+            onTap: (){
+              Navigator.of(context).pop();// 关闭侧边栏
+              Navigator.pushNamed(context, '/tianqi');
+            },
           ),
           Divider(),
         ],

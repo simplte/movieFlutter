@@ -16,7 +16,7 @@ class Tabs extends StatefulWidget {
 
 class _TabsState extends State<Tabs> {
   int _currentIndex = 0;
-  List _pageList = [
+  List<Widget> _pageList = [
     HomePage(),
     MoiveList(),
     Users(),
@@ -56,7 +56,10 @@ class _TabsState extends State<Tabs> {
         // 凸起按钮位置
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         // 页面呈现的内容
-        body: this._pageList[this._currentIndex],
+        body: IndexedStack( // 解决tab点击就重新请求的问题，保持页面状态
+          index: this._currentIndex,
+          children: this._pageList,
+        ),
         // 底部tab
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: this._currentIndex,

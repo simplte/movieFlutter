@@ -15,21 +15,9 @@ class _MoiveListState extends State<MoiveList> {
     return TabBarView(
       children: <Widget>[
         NewMoive(),
-        ListView(
-          children: <Widget>[
-            ListTile(title: Text('data2'),),
-          ],
-        ),
-        ListView(
-          children: <Widget>[
-            ListTile(title: Text('data2'),),
-          ],
-        ),
-        ListView(
-          children: <Widget>[
-            ListTile(title: Text('data2'),),
-          ],
-        )
+        NewMoive(),
+        NewMoive(),
+        NewMoive(),
       ],
     );
   }

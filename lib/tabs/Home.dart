@@ -7,12 +7,16 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin{
+  @override
+  bool get wantKeepAlive =>true;
   String homePageContent = '获取数据中';
   List<Widget> listDataM = new List();
+
   @override
   void initState() {
     getHomeData().then((val) {
+      print(val);
       List<Widget> _listMoiveDate = new List();
       for (var i = 0; i < val['subjects'].length; i++) {
         Map _itemData = val['subjects'][i];
