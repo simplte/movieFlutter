@@ -42,7 +42,11 @@ class LeftDrawer extends StatelessWidget {
             leading: CircleAvatar(
               child: Icon(Icons.email,color: Colors.cyan,),
             ),
-            title: Text('最新信息')
+            title: Text('最新信息'),
+            onTap: (){
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/moiveitem');
+            },
           ),
           Divider(),
           ListTile(
