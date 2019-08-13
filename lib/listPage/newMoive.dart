@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../dataHandle/homeData.dart';
 
@@ -89,9 +91,20 @@ class _NewMoiveState extends State<NewMoive> with AutomaticKeepAliveClientMixin{
           ),
         );
       }
-      setState(() {
-        listDataM = _listMoiveDate;
-      });
+      // 这样赋值 解决了报错问题
+      Timer _countdownTimer;  
+      @override
+      void dispose() {
+        _countdownTimer?.cancel();
+        _countdownTimer = null;super.dispose();
+      }
+      _countdownTimer = Timer.periodic(Duration(seconds: 2), (timer) {if (mounted){
+          setState(() {
+            listDataM = _listMoiveDate;
+          });
+        }
+      }); 
+      
     });
 
     super.initState();

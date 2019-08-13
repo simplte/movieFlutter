@@ -8,7 +8,7 @@ final routes = {
   '/':(context) => Tabs(),
   '/moiveitem': (context) => MoiveItem(),
   '/userinfo': (context,{arguments}) => UserInfo(arguments:arguments),
-  '/tianqi': (context, {arguments}) => TianQi(arguments: arguments),
+  '/tianqi': (context, {arguments}) => Tianqi(),
 };
 var onGenerateRoute = (RouteSettings settings) {
   final String name = settings.name;
