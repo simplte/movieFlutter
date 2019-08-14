@@ -60,6 +60,15 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           Divider(),
+          ListTile(
+            leading: CircleAvatar(
+              child: Icon(Icons.movie,color: Colors.cyan,),
+            ),
+            title: Text('providetest'),
+            onTap: (){
+              Navigator.pushNamed(context, '/providetest');
+            },
+          ),
         ],
       )
     );
