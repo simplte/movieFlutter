@@ -51,12 +51,12 @@ class _MoiveItemState extends State<MoiveItem> {
       {
         'index':0,
         'cname': '裤子婴儿',
-        'list': ['长裤子', '短裤子', '花裤子']
+        'list': ['长裤哈子', '短裤子', '花裤子']
       },
       {
         'index':1,
         'cname': '裤子婴儿',
-        'list': ['长裤子', '短裤子', '花裤子']
+        'list': ['长裤哈子', '短裤子', '花裤子']
       },
     ]
   ];
@@ -104,7 +104,6 @@ class _MoiveItemState extends State<MoiveItem> {
   }
   @override
   void initState() {
-    // TODO: implement initState
     _expandData = _classList[0];
     super.initState();
   }

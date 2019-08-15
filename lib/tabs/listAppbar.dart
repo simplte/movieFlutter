@@ -26,7 +26,6 @@ class ListAppBar extends StatelessWidget implements PreferredSizeWidget{
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => getSize();
   Size getSize(){
     return new Size(100.0, 100.0);

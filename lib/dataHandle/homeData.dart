@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'dart:async';
 import '../config/requestUrl.dart';
-import 'dart:io';
 const _apikey = '?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E6%B7%B1%E5%9C%B3&start=0&count=100&client=somemessage&udid=dddddddddddddddddddddd';
 // 请求头数据需要统一配置
 // var dio = new Dio(new BaseOptions(
