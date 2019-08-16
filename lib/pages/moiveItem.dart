@@ -63,7 +63,7 @@ class _MoiveItemState extends State<MoiveItem> {
   List _expandData = new List();
   
 
-  // Function
+  // FunctionS
   List<Widget> _listfun() {
     List<Widget> _showList = new List();
     for (var i = 0; i < _dataList.length; i++) {
@@ -102,11 +102,22 @@ class _MoiveItemState extends State<MoiveItem> {
     }
     return _recommendListw;
   }
+  
+  _tabClick(int idx){
+    setState(() {
+      this.currentIndex = idx;
+      this._expandData = _classList[currentIndex];
+    });
+  }
+
+  // FunctionE
+  
   @override
   void initState() {
     _expandData = _classList[0];
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,24 +126,16 @@ class _MoiveItemState extends State<MoiveItem> {
       ) ,
       body: ListView(
         children: <Widget>[
-          Text(_expandData.toString()),
           LinkImg(),
           ServiceImg(),
           _groupClassW(),
           _recommendListW(),
-          SizedBox(
-            height: 20,
-          ),
+          SizedBox(height: 20,),
           ExpansionParnelListDemo(_expandData)
         ],
       ),
     );
   }
-
-
-
-
-
 
   // 类型tab列表
   Widget _groupClassW() {
@@ -149,10 +152,7 @@ class _MoiveItemState extends State<MoiveItem> {
         flex: 1,
         child: InkWell(
           onTap: () {
-            setState(() {
-              this.currentIndex = idx;
-              this._expandData = _classList[currentIndex];
-            });
+            _tabClick(idx);
           },
           child: Container(
             height: 80,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../listPage/newMoive.dart';
-
+import 'package:flutter_app/listPage/hotMoive.dart';
 class MoiveList extends StatefulWidget {
   MoiveList({Key key}) : super(key: key);
 
@@ -27,8 +27,8 @@ class _MoiveListState extends State<MoiveList>
     return TabBarView(
       children: <Widget>[
         NewMoive(),
-        NewMoive(),
-        NewMoive(),
+        HotMoive(),
+        Text('2'),
         NestedScrollView(
             controller: _scrollViewController,
             headerSliverBuilder:

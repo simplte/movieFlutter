@@ -10,24 +10,12 @@ class ExpansionParnelListDemo extends StatefulWidget {
 
 class _ExpansionParnelListDemoState extends State<ExpansionParnelListDemo> {
   _ExpansionParnelListDemoState() {
-    mList = new List();
     expandStateList = new List();
-    // for(int i = 0; i < 10; i ++){
-    //   mList.add(i);
-    //   // 第一个是索引，第二个是否打开;
-    //   expandStateList.add(ExpandStateBean(i,false));
-    // }
   }
-
-  List exList;
-  // 存放状态和索引List
+    // 存放状态和索引List
   List<ExpandStateBean> expandStateList;
-
-  List<int> mList;
-
   ScrollController _scrollController = ScrollController();
-
-  @override
+    @override
   void dispose() {
      _scrollController.dispose();
     super.dispose();
@@ -56,6 +44,7 @@ class _ExpansionParnelListDemoState extends State<ExpansionParnelListDemo> {
       expandStateList.add(ExpandStateBean(_listdata[i]['index'], false));
     }
   }
+
 
   Widget getRow(int i, List item) {
     print(item);

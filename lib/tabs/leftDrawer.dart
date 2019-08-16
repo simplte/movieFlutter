@@ -14,11 +14,11 @@ class LeftDrawer extends StatelessWidget {
                   accountName: Text('卜前程您好'),
                   accountEmail: Text('6575734@qq.com'),
                   currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage('https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1565446326&di=5dbb8ac4a2e6494c71bece43603018be&src=http://b-ssl.duitang.com/uploads/item/201704/21/20170421083329_3cxt8.png',
+                    backgroundImage: NetworkImage('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565880938193&di=25a15323acffa5cb7b2bd1253479e32b&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201505%2F27%2F20150527160400_iYmE3.jpeg',
                     ),
                   ),
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: NetworkImage('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=369041081,2781921991&fm=26&gp=0.jpg'),
+                    image: DecorationImage(image: NetworkImage('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565880938036&di=b6b50200295ec2d7a09faab55a472c73&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201605%2F26%2F20160526165127_ywd5F.jpeg'),
                       fit: BoxFit.cover
                     ) 
                   ),
