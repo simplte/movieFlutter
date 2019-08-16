@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../listPage/newMoive.dart';
-import 'package:flutter_app/listPage/hotMoive.dart';
+import 'package:flutter_app/pages/listPage/hotMoive.dart';
 class MoiveList extends StatefulWidget {
   MoiveList({Key key}) : super(key: key);
 

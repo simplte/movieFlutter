@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'tabs/Home.dart';
-import 'tabs/MovieList.dart';
-import 'tabs/User.dart';
+import 'pages/tabs/Home.dart';
+import 'pages/tabs/MovieList.dart';
+import 'pages/tabs/User.dart';
 
-import 'tabs/userAppbar.dart';
-import 'tabs/homeAppbar.dart';
-import 'tabs/listAppbar.dart';
-import 'tabs/leftDrawer.dart';
+import 'pages/tabs/userAppbar.dart';
+import 'pages/tabs/homeAppbar.dart';
+import 'pages/tabs/listAppbar.dart';
+import 'leftDrawer.dart';
 
 class Tabs extends StatefulWidget {
   Tabs({Key key}) : super(key: key);

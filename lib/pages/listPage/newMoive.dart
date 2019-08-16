@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_app/model/likeMoives.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/dataHandle/homeData.dart';
+import 'package:flutter_app/data/homeData.dart';
 import 'package:oktoast/oktoast.dart';
 
 

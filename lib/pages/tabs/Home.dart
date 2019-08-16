@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../dataHandle/homeData.dart';
-import '../components/swiperdiv.dart';
+import '../../data/homeData.dart';
+import '../../components/swiperdiv.dart';
 import 'dart:convert';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class HomePage extends StatefulWidget {
