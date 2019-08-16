@@ -1,43 +1,11 @@
 import 'dart:async';
+import 'package:provider/provider.dart';
+import 'package:flutter_app/model/likeMoives.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/dataHandle/homeData.dart';
+import 'package:oktoast/oktoast.dart';
 
-class TipsBtn extends StatelessWidget {
-  const TipsBtn({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    print('xxxx');
-    return MaterialButton(
-      color: Colors.blue,
-      child: new Text('甄嬛点我，快点我'),
-      onPressed: () {
-        showDialog(
-            context: context,
-            barrierDismissible: false,
-            builder: (BuildContext context) {
-              return new AlertDialog(
-                title: new Text('标题'),
-                content: SingleChildScrollView(
-                  child: ListBody(
-                    children: <Widget>[Text('甄嬛点我点到点我')],
-                  ),
-                ),
-                actions: <Widget>[
-                  FlatButton(
-                    child: Text('好的'),
-                    onPressed: () {
-                      // Navigator.pushNamed(context, '/moiveitem');
-                    },
-                  )
-                ],
-              );
-            });
-      },
-    );
-  }
-}
 
 class NewMoive extends StatefulWidget {
   NewMoive({Key key}) : super(key: key);
@@ -107,6 +75,7 @@ class LikeIcon extends StatefulWidget {
 
 class _LikeIconState extends State<LikeIcon> {
   bool islike=false;
+  
   @override
   void initState() {
     
@@ -114,6 +83,7 @@ class _LikeIconState extends State<LikeIcon> {
   }
   @override
   Widget build(BuildContext context) {
+    final likeStore = Provider.of<LikeMoives>(context);
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(
@@ -134,6 +104,14 @@ class _LikeIconState extends State<LikeIcon> {
           setState(() {
             widget.listdata[widget.postion]['islike'] = !widget.listdata[widget.postion]['islike'];
           });
+          if(widget.listdata[widget.postion]["islike"]) {
+            showToast('喜欢死了',position:ToastPosition.center
+            );
+          }else {
+            showToast('感觉不爱了',position:ToastPosition.center
+            );
+          }
+          likeStore.increment(widget.listdata[widget.postion]);
         },
         onTap: (){
           

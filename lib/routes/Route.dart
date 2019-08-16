@@ -4,13 +4,16 @@ import '../pages/moiveItem.dart';
 import '../pages/tianqi.dart';
 import '../Tabs.dart';
 import '../pages/providetest.dart';
+import '../pages/likeMoiveStore.dart';
+
 
 final routes = {
   '/':(context) => Tabs(),
   '/moiveitem': (context) => MoiveItem(),
   '/userinfo': (context,{arguments}) => UserInfo(arguments:arguments),
   '/tianqi': (context, {arguments}) => Tianqi(),
-  '/providetest':(context) => ProvideTest()
+  '/providetest':(context) => ProvideTest(),
+  '/likemoive':(context)=>LikeMoiveStore()
 };
 var onGenerateRoute = (RouteSettings settings) {
   final String name = settings.name;
