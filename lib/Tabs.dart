@@ -6,7 +6,7 @@ import 'pages/tabs/User.dart';
 import 'pages/tabs/userAppbar.dart';
 import 'pages/tabs/homeAppbar.dart';
 import 'pages/tabs/listAppbar.dart';
-import 'leftDrawer.dart';
+import 'drawer.dart';
 
 class Tabs extends StatefulWidget {
   Tabs({Key key}) : super(key: key);

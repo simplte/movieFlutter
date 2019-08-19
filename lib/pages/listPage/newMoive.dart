@@ -28,6 +28,7 @@ class _NewMoiveState extends State<NewMoive> with AutomaticKeepAliveClientMixin{
 
   @override
   Widget build(BuildContext context) {
+    final likeStore = Provider.of<LikeMoives>(context);
     return FutureBuilder(
       future: _getmoivedata,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -35,8 +36,14 @@ class _NewMoiveState extends State<NewMoive> with AutomaticKeepAliveClientMixin{
           print('===========列表页数据');
           List<Map> dataMovie = (snapshot.data['subjects'] as List).cast();
           // 拿到数据后对每个对象添加islike属性
-          for(var i=0;i<snapshot.data['subjects'].length;i++) {
-            snapshot.data['subjects'][i]['islike'] = false;
+          if(likeStore.value.length > 0) {
+            for(var j=0;j<likeStore.value.length;j++){
+              for(var i =0;i<snapshot.data['subjects'].length;i++) {
+                if(likeStore.value[j]['id'] == snapshot.data['subjects'][i]['id']){
+                  snapshot.data['subjects'][i]['islike'] = true;
+                }
+              }
+            }
           }
           return ListView.builder(
             itemCount: snapshot.data['subjects'].length,

@@ -34,6 +34,9 @@ Future getListData() async {
     Response response;
     response = await Dio().get(
         MOIVEREQUEST + MOIVEAPILIST[1] + _apikey);
+        for(var i=0;i<response.data['subjects'].length;i++) {
+            response.data['subjects'][i]['islike'] = false;
+          }
     return response.data;
   } catch (e) {
     return print(e);
