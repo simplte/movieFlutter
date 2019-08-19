@@ -10,7 +10,7 @@ import '../pages/likeMoiveStore.dart';
 final routes = {
   '/':(context) => Tabs(),
   '/moiveitem': (context) => MoiveItem(),
-  '/userinfo': (context,{arguments}) => UserInfo(arguments:arguments),
+  '/userinfo': (context,{arguments}) => UserInfo(),
   '/tianqi': (context, {arguments}) => Tianqi(),
   '/providetest':(context) => ProvideTest(),
   '/likemoive':(context)=>LikeMoiveStore()

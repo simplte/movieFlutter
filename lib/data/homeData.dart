@@ -19,6 +19,7 @@ const _apikey = '?apikey=0b2bdeda43b5688921839c8ecb20399b&city=%E6%B7%B1%E5%9C%B
 //   )); 
 
 Future getHomeData() async {
+  print(MOIVEREQUEST + MOIVEAPILIST[1] + _apikey);
   try {
     Response response;
     response = await Dio().get(
