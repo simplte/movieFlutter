@@ -110,7 +110,6 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
           // var data = json.decode(snapshot.toString());
           // List<Map> _dataObj = (data['subjects'] as List).cast();
 
-          print('-========数据来了');
           return ListView(
             children: <Widget>[
               SwiperDiv(showSwipData: snapshot.data['subjects'].take(8).toList()),

@@ -72,7 +72,7 @@ class HttpUtil {
       response = await dio.get(url,
           queryParameters: data, options: options, cancelToken: cancelToken);
       print('get success---------${response.statusCode}');
-      print('get success---------${response.data}');
+      // print('get success---------${response.data}');
 
 //      response.data; 响应体
 //      response.headers; 响应头
