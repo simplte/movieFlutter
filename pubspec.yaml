@@ -28,7 +28,7 @@ dependencies:
   provider: ^3.0.0+1
   flutter_screenutil: ^0.5.3
   fluttertoast: ^3.1.0
-  oktoast: ^2.1.9
+  # oktoast: ^2.1.9
   cookie_jar: ^1.0.0
   flutter_easyrefresh: ^2.0.3
 

@@ -4,7 +4,7 @@ import 'package:flutter_app/model/likeMoives.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/homeData.dart';
-import 'package:oktoast/oktoast.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 class NewMoive extends StatefulWidget {
@@ -112,11 +112,26 @@ class _LikeIconState extends State<LikeIcon> {
             widget.listdata[widget.postion]['islike'] = !widget.listdata[widget.postion]['islike'];
           });
           if(widget.listdata[widget.postion]["islike"]) {
-            showToast('喜欢死了',position:ToastPosition.center
-            );
+            Fluttertoast.showToast(
+              msg: "收藏成功了~",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              timeInSecForIos: 1,
+              backgroundColor: Colors.black54,
+              textColor: Colors.white,
+              fontSize: 16.0
+          );
           }else {
-            showToast('感觉不爱了',position:ToastPosition.center
-            );
+             Fluttertoast.showToast(
+              msg: "取消收藏成功",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              timeInSecForIos: 1,
+              backgroundColor: Colors.black54,
+              textColor: Colors.white,
+              fontSize: 16.0
+          );
+            
           }
           likeStore.increment(widget.listdata[widget.postion]);
         },

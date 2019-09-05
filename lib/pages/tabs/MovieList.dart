@@ -9,8 +9,6 @@ class MoiveList extends StatefulWidget {
 
 class _MoiveListState extends State<MoiveList>
     with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
-  String _imgUrl =
-      'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2563780504.webp';
   TabController _tabController;
   ScrollController _scrollViewController;
   @override
